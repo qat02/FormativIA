@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FormativIA Visual</title>
+  <meta name="description" content="Crea instrumentos visuales de evaluación formativa para docentes.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<script>
+  const GPT_LINK = "https://chatgpt.com/g/PEGA-AQUI-TU-LINK-DE-FORMATIVIA";
+</script>
+<header class="header">
+  <nav class="nav">
+    <a class="brand" href="#inicio">
+      <span class="brand-icon"><span class="book-left"><i></i><i></i><i></i></span><span class="book-right"><b></b><b></b><b></b><em></em><em></em><em></em></span></span>
+      <span class="brand-text">Formativ<span>IA</span></span>
+    </a>
+    <button class="menu" id="menu">☰</button>
+    <div class="links" id="links"><a href="#inicio">Inicio</a><a href="#objetivo">Objetivo</a><a href="#funciona">Cómo funciona</a><a href="#ejemplos">Ejemplos</a><a href="#acceso">Acceso</a></div>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <div class="tag">Evaluar para mejorar, no para calificar</div>
+      <h1>Evalúa para <span>mejorar</span></h1>
+      <p>FormativIA Visual ayuda a docentes a crear instrumentos de evaluación formativa visuales, claros y listos para usar en clase: rúbricas, listas de cotejo, dianas, coevaluaciones, autoevaluaciones y más.</p>
+      <div class="buttons"><button onclick="openGPT()" class="btn primary">Usarlo ahora</button><button onclick="openGPT()" class="btn secondary">Entrar aquí</button></div>
+    </div>
+    <div class="hero-graphic">
+      <div class="floating-card chart"><span></span><span></span><span></span></div>
+      <div class="big-logo"><div class="book"><div class="page checklist"><p>✓</p><p>✓</p><p></p></div><div class="page rubric"><div>★</div><div>★</div><div>★</div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div>
+      <div class="floating-card users">👥</div><div class="floating-card circle"><span></span></div>
+    </div>
+  </section>
+  <section class="section" id="objetivo"><h2>¿Qué es FormativIA?</h2><p class="subtitle">Un asistente para observar, retroalimentar y mejorar el aprendizaje.</p><div class="cards three"><article><div class="icon">☑</div><h3>Evaluación formativa</h3><p>Diseña instrumentos que permiten valorar avances reales.</p></article><article><div class="icon purple">💬</div><h3>Retroalimentación efectiva</h3><p>Incluye logros, sugerencias y próximos pasos.</p></article><article><div class="icon green">↗</div><h3>Mejora del aprendizaje</h3><p>Ayuda a ajustar la enseñanza según las necesidades del grupo.</p></article></div><h2 class="mt">Objetivos</h2><div class="cards four"><article><div class="icon">🎯</div><h3>Valorar avances</h3><p>Reconocer logros y progresos.</p></article><article><div class="icon green">🔍</div><h3>Detectar dificultades</h3><p>Identificar qué requiere apoyo.</p></article><article><div class="icon purple">🗣️</div><h3>Retroalimentar</h3><p>Dar comentarios útiles y claros.</p></article><article><div class="icon teal">⚙️</div><h3>Ajustar la enseñanza</h3><p>Tomar decisiones para la siguiente clase.</p></article></div></section>
+  <section class="section soft" id="funciona"><h2>¿Cómo funciona?</h2><p class="subtitle">Escribe la actividad, recibe un preview visual y después imprímelo o proyéctalo.</p><div class="steps"><article><span>1</span><h3>Describe tu actividad</h3><p>Indica tema, grado, materia o sube un documento.</p></article><article><span>2</span><h3>Recibe un preview</h3><p>FormativIA genera una propuesta visual lista para revisar.</p></article><article><span>3</span><h3>Imprime o proyecta</h3><p>Usa el material en clase y ajusta tu enseñanza.</p></article></div></section>
+  <section class="section" id="ejemplos"><h2>Ejemplos visuales</h2><p class="subtitle">Haz clic en cada ejemplo para verlo grande.</p><div class="examples"><button class="example" data-type="rubrica"><div class="mini mini-rubric"><h4>Rúbrica</h4><div class="grid"><span>Criterio</span><span>3</span><span>2</span><span>1</span><span>Contenido</span><span>★</span><span>●</span><span>○</span><span>Claridad</span><span>★</span><span>●</span><span>○</span><span>Equipo</span><span>★</span><span>●</span><span>○</span></div></div><h3>Rúbrica breve</h3></button><button class="example" data-type="cotejo"><div class="mini checklist-view"><h4>Lista de cotejo</h4><p>☑ Comprende el tema</p><p>☑ Participa</p><p>☐ Explica con claridad</p><p>☐ Propone mejoras</p></div><h3>Lista de cotejo</h3></button><button class="example" data-type="diana"><div class="mini"><h4>Diana</h4><div class="target"></div><p class="small">Comprensión • Participación • Mejora</p></div><h3>Diana de evaluación</h3></button></div></section>
+  <section class="cta" id="acceso"><div><h2>¡Crea, evalúa y transforma tu clase!</h2><p>Con FormativIA, evaluar es acompañar y hacer crecer.</p></div><div class="buttons"><button onclick="openGPT()" class="btn white">Probar FormativIA</button><button onclick="openGPT()" class="btn clear">Acceder al asistente →</button></div></section>
+</main>
+<footer><div class="footer-brand"><span class="footer-icon">☑</span><strong>Formativ<span>IA</span></strong></div><p>🎓 Evaluar para mejorar, no para calificar.</p><p>Hecho con ❤️ para docentes.</p></footer>
+<div class="modal" id="modal"><div class="modal-box"><button id="close">×</button><div id="modalBody"></div></div></div>
+<script src="script.js"></script>
+</body>
+</html>
